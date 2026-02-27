@@ -9,6 +9,7 @@ build: format
 clean:
     docker compose run --rm blocksds make clean
 
+# assumes that anyone has rwmda on /nds
 upload: build
     curl -X DELETE http://{{server}}/nds/ndsfetch.nds 2>/dev/null || true
     curl -T ndsfetch.nds http://{{server}}/nds/ndsfetch.nds
