@@ -1,0 +1,6 @@
+services:
+  blocksds:
+    image: skylyrac/blocksds:slim-latest
+    volumes:
+      - .:/work
+    working_dir: /work
